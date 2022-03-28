@@ -1,0 +1,53 @@
+.fa-comment-alt {
+  color: rgba(0, 0, 0, 0.8);
+}
+.fa-exclamation-circle {
+  color: tomato;
+}
+.second {
+  display: flex;
+  justify-content: space-between;
+}
+.emtpy:not(.two) {
+  width: 60px;
+}
+.two {
+  width: 80px;
+}
+.drive__ntfcn {
+  width: 7px;
+  height: 7px;
+  background-color: tomato;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+}
+.more-screen .icon-row {
+  margin-top: 35px;
+}
+.more-suggestions {
+  margin-top: 50px;
+  border-top: var(--main-border);
+  padding-top: 40px;
+}
+.more-suggestions__title {
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+.more-suggestions__img {
+  width: 55px;
+  margin-bottom: 13px;
+  border-radius: 10px;
+}
+.more-suggestions__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.more-suggestions__icon span {
+  font-size: 15px;
+}
+.more-suggestions__icons {
+  display: flex;
+  justify-content: space-between;
+}

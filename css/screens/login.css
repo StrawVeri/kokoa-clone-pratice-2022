@@ -1,0 +1,64 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.5;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  padding: 15px 0px;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+#login-form input:not([type="submit"]) {
+  border-bottom: solid 2px rgb(0, 0, 0, 0.2);
+  transition: border-color 0.2s ease-in-out;
+}
+/* css:not():  [] 내의 것은 attribute selector */
+
+#login-form input::placeholder {
+  color: rgb(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: rgb(249, 220, 5, 0.35);
+  /* var : import 없이는 사용할 수 없음 */
+}
+
+#login-form input[type="submit"] {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+#login-form input[type="submit"]:focus {
+  background-color: rgb(255, 239, 0, 0.65);
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  /* inherit : 유산 지금의 경우에는 login-form */
+}

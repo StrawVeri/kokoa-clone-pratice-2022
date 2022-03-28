@@ -1,0 +1,17 @@
+#no-landscape {
+  position: absolute;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--kakaoyellow);
+  display: none;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+@media (orientation: landscape) {
+  #no-landscape {
+    display: flex;
+  }
+}

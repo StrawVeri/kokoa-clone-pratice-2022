@@ -1,0 +1,122 @@
+.recommended-friends {
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+  padding: 25px 0px;
+}
+.recommended-friends__title {
+  font-size: 16px;
+  color: var(--gray);
+  font-weight: 400;
+}
+.recommended-friends span {
+  margin: 110px 0;
+  text-align: center;
+  display: block;
+  color: var(--gray);
+}
+.open-chat__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--gray);
+  margin: 25px 0px -20px 0px;
+  padding-bottom: 25px;
+}
+.open-post {
+  padding: 15px 0px;
+}
+.open-post:nth-last-child(2) {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+.open-chat__title {
+  font-weight: 700;
+}
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.open-post__members img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.open-post__title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.open-post__hashtags {
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+.open-post__hashtag {
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+.open-post__members {
+  display: flex;
+  align-items: center;
+}
+.open-post__member-count {
+  opacity: 0.5;
+  font-size: 14px;
+}
+.open-post__members .divider {
+  width: 2px;
+  height: 10px;
+  background-color: var(--gray);
+  margin: 0px 5px;
+}
+.open-post__member-status {
+  color: #ffb0e0;
+  font-weight: 700;
+  font-size: 14px;
+}
+.open-post__column > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+.open-post__heart-count {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+}
+.open-post__heart-count span {
+  margin-left: 4px;
+  font-size: 14px;
+}
+.open-post__photo {
+  position: relative;
+}
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15) translateY(0.5px);
+    color: tomato;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.open-post__heart-count:hover i {
+  will-change: transform;
+  /* 브라우저에게 렌더링 힌트를 주고, element에 실행되길 기대하는 변화를 명시함*/
+  animation: heartBeat 1s linear infinite;
+}
+.open-chat {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 480px;
+}

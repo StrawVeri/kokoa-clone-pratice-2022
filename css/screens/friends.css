@@ -1,0 +1,57 @@
+#friends-display-link {
+  text-align: center;
+  display: block;
+  background-color: #fafafa;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: -15px;
+}
+
+#friends-display-link i {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+.friends-screen__channel {
+  margin-top: 50px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+}
+#splash-screen {
+  background-color: var(--kakaoyellow);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 122px;
+  animation: hideSplashScreen 0.5s ease-in-out forwards;
+  /* 애니메이션이 끝나면 원래대로 돌아간다 without forwards
+  opacity 만 설정해놓으면 애니메이션이 끝난 후 원래 elements를 클릭할 수 없다 
+  아예 지워버리려면 javascript 필요 */
+  animation-delay: 0.5s;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

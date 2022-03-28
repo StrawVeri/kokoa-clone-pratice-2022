@@ -1,0 +1,35 @@
+/* @import: css 상단에 위치해야 함 */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto&display=swap");
+
+@import "reset.css";
+@import "/css/variable.css";
+
+/* Components */
+@import "/css/components/status-bar.css";
+@import "/css/components/navigation-bar.css";
+@import "/css/components/screen-header.css";
+@import "/css/components/user-component.css";
+@import "/css/components/badge.css";
+@import "/css/components/icon-row.css";
+@import "/css/components/no-mobile.css";
+@import "/css/components/no-landscape.css";
+
+/* Screens */
+@import "/css/screens/login.css";
+@import "/css/screens/friends.css";
+@import "/css/screens/find.css";
+@import "/css/screens/more.css";
+@import "/css/screens/settings.css";
+@import "/css/screens/chat.css";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #2e363e;
+}
+
+.main-screen {
+  margin: 0px var(--horizontal-space);
+}
+.ntfcn {
+  position: relative;
+}

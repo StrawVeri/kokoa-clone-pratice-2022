@@ -1,0 +1,302 @@
+/* z-index 확인 필요 */
+
+.screen-header-chat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--horizontal-space);
+  position: relative;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+}
+.chat-screen .status-bar,
+.screen-header-chat {
+  background-color: rgb(171, 193, 209);
+}
+.screen-header-chat h1 {
+  font-size: 26px;
+  font-weight: 700;
+  width: 33%;
+  text-align: center;
+}
+.screen-header-chat div {
+  display: flex;
+  width: 33%;
+}
+.screen-header-chat div:first-child {
+  display: flex;
+  justify-content: flex-start;
+}
+.screen-header-chat div:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+.chat-screen {
+  background-color: rgb(171, 193, 209);
+  height: 500vh;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.main-chat {
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chat__timestamp {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: 300;
+  padding: 7px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  margin-bottom: 25px;
+  animation: fadeIn 0.5s linear;
+}
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+@keyframes popUp {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.message-row img {
+  width: 50px;
+  opacity: 0;
+  border-radius: 43%;
+  margin-right: 10px;
+  animation: popUp 0.7s ease-in-out forwards;
+  animation-delay: 0.9s;
+  will-change: transform;
+}
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+.message__author {
+  opacity: 0;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+  animation: fadeIn2 0.4s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+.message__bubble {
+  background-color: white;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border-top-left-radius: 0px;
+  margin-right: 6px;
+  display: flex;
+}
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+.message__time {
+  opacity: 0.8;
+  font-size: 12px;
+  font-weight: 700;
+}
+.message-row--own {
+  justify-content: flex-end;
+  display: flex;
+}
+.message-row--own .message__bubble {
+  background-color: #fbdc05;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 0px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+.message-row--own .message__time {
+  order: 0;
+}
+.message-row--own .message__bubble {
+  order: 1;
+}
+/* order 는 flex chiledren 에게만 적용된다 
+flex container 에 flex-direction: row-reverse; 를 주는 방법으로도 가능 */
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  display: flex;
+  position: relative;
+}
+.reply input {
+  width: 100%;
+  height: 30px;
+  border-radius: 18px;
+  border: var(--main-border);
+  padding: 0px 12px;
+  transition: all 0.3s ease-in-out;
+}
+.reply i:not(.fa-arrow-up) {
+  opacity: 0.5;
+}
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 2.2px;
+  top: 2px;
+}
+.reply__column:last-child > i {
+  right: 40px;
+  top: 8.5px;
+}
+.reply__column button {
+  background-color: #fbdc05;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+@keyframes beatbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.bubble-left {
+  opacity: 0;
+  animation: beatbeat 1s ease-in-out forwards;
+  will-change: transform;
+  animation-delay: 2s;
+}
+@keyframes fadeIn3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+.mt-left {
+  opacity: 0;
+  animation: fadeIn3 0.6s linear forwards;
+  animation-delay: 3.2s;
+}
+@keyframes jumpjump {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.dingdong {
+  opacity: 0;
+  position: relative;
+  animation: jumpjump 1s ease-in-out forwards;
+}
+.dingdong:nth-child(1) {
+  animation-delay: 4.5s;
+}
+.dingdong:nth-child(2) {
+  animation-delay: 4.7s;
+}
+.dingdong:nth-child(3) {
+  animation-delay: 4.9s;
+}
+.dingdong:nth-child(4) {
+  animation-delay: 5.1s;
+}
+.dingdong:nth-child(5) {
+  animation-delay: 5.3s;
+}
+@keyframes fadeIn4 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bubble-right {
+  opacity: 0;
+  animation: fadeIn4 0.3s ease-in-out forwards;
+  animation-delay: 4.3s;
+}
+.mt-right {
+  opacity: 0;
+  animation: fadeIn3 0.6s linear forwards;
+  animation-delay: 5.9s;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-grin-tongue-squint,
+.reply:focus-within button {
+  opacity: 0;
+}
+.reply .reply__column:first-child,
+.reply .fa-grin-tongue-squint,
+.reply button {
+  transition: all 0.3s ease-in-out;
+}
+.reply:focus-within input {
+  transform: translateX(-5.5%) translateY(-80px) scaleX(1.2);
+}
+.reply:focus-within {
+  transform: translateY(80px);
+}
